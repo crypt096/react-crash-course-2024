@@ -1,6 +1,6 @@
 interface HeroProps {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
 }
 
 const Hero = ({ title = 'Become a React Dev', subtitle = 'Find the React job that fits your skill set!' }: HeroProps) => {
