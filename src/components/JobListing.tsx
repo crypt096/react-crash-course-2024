@@ -7,7 +7,7 @@ interface Job {
   location: string;
 }
 
-const JobListing = (job:Job) => {
+const JobListing = (job: Job) => {
   return (
     <div className="bg-white rounded-xl shadow-md relative">
       <div className="p-4">
