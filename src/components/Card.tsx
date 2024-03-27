@@ -1,6 +1,6 @@
 interface CardProps {
   children: React.ReactNode,
-  bg: string;
+  bg?: string;
 }
 
 const Card = ({ children, bg = 'bg-gray-100' }: CardProps) => {
