@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import HomeCards from "./components/HomeCards";
+import JobListings from "./components/JobListings";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <HomeCards />
+      <JobListings />
 
       <section className="m-auto max-w-lg my-10 px-6">
         <a
