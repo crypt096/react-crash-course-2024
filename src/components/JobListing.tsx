@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Job {
   id: string;
     title: string;
@@ -19,6 +21,14 @@ interface JobListingProps {
 }
 
 const JobListing = (props: JobListingProps ) => {
+  const [showFullDescription, setShowFullDescription] = useState(false); 
+
+  let description = props.job.description;
+
+  if (!showFullDescription) {
+    description = description.substring(0, 90) + "...";
+  }
+
   return (
     <div className="bg-white rounded-xl shadow-md relative">
       <div className="p-4">
@@ -28,8 +38,10 @@ const JobListing = (props: JobListingProps ) => {
         </div>
 
         <div className="mb-5">
-          {props.job.description}
+          {description}
         </div>
+
+        <button className="text-indigo-500 mb-5 hover:text-indigo-600">{showFullDescription ? 'Less' : 'More'}</button>
 
         <h3 className="text-indigo-500 mb-2">{props.job.salary} / Year</h3>
 
