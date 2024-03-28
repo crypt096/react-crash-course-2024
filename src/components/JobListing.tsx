@@ -41,7 +41,7 @@ const JobListing = (props: JobListingProps ) => {
           {description}
         </div>
 
-        <button className="text-indigo-500 mb-5 hover:text-indigo-600">{showFullDescription ? 'Less' : 'More'}</button>
+        <button className="text-indigo-500 mb-5 hover:text-indigo-600" onClick={() => setShowFullDescription(!showFullDescription)}>{showFullDescription ? 'Less' : 'More'}</button>
 
         <h3 className="text-indigo-500 mb-2">{props.job.salary} / Year</h3>
 
